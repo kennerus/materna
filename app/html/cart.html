@@ -1,0 +1,198 @@
+<div class="main prod">
+	<div class="product">
+		<div class="product__wrap wrap">
+			<div class="product__breadcrumps">
+				<ul>
+					<li><a href="index.html">Главная</a> <span>></span></li>
+					<li><a class="active" href="catalogue.html">Корзина</a></li>
+				</ul>
+			</div>
+			<div class="product__content-container">
+				<table class="cart-table">
+					<thead>
+						<tr>
+							<th>Фото</th>
+							<th>Товар</th>
+							<th>Цена</th>
+							<th>Количество</th>
+							<th>Общая сумма</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="cart__full-price" colspan="5">Итого: <span>7500 руб.</span></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td class="cart__img">
+								<div>
+									<img src="img/cart-item.jpg" alt="">
+								</div>
+							</td>
+							<td class="cart__desc">
+								<a href="product.html" class="cart-table__item">Молочная смесь <span class="uppercase">Materna Extra Care</span></a>
+								<p class="item-desc">улучшенная формула, от 6 до 12 месяцев, 700г</p>
+							</td>
+							<td class="cart__price">122500 руб.</td>
+							<td class="amount__calc">
+								<div>
+									<span class="minus">&#45;</span><input type="text" value="1"><span class="plus">&#43;</span>
+								</div>
+							</td>
+							<td class="cart__items-price">
+								<div>
+									<span class="cart-table__final-const">212500 руб.</span>
+									<span class="cart-table__delete"><img src="img/delete.png" alt=""></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="cart__img">
+								<div>
+									<img src="img/cart-item.jpg" alt="">
+								</div>
+							</td>
+							<td class="cart__desc">
+								<a href="product.html" class="cart-table__item">Молочная смесь <span class="uppercase">Materna Extra Care</span></a>
+								<p class="item-desc">улучшенная формула, от 6 до 12 месяцев, 700г</p>
+							</td>
+							<td class="cart__price">2500 руб.</td>
+							<td class="amount__calc">
+								<div>
+									<span class="minus">&#45;</span><input type="text" value="1"><span class="plus">&#43;</span>
+								</div>
+							</td>
+							<td class="cart__items-price">
+								<div>
+									<span class="cart-table__final-const">2500 руб.</span>
+									<span class="cart-table__delete"><img src="img/delete.png" alt=""></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="cart__img">
+								<div>
+									<img src="img/cart-item.jpg" alt="">
+								</div>
+							</td>
+							<td class="cart__desc">
+								<a href="product.html" class="cart-table__item">Молочная смесь <span class="uppercase">Materna Extra Care</span></a>
+								<p class="item-desc">улучшенная формула, от 6 до 12 месяцев, 700г</p>
+							</td>
+							<td class="cart__price">2500 руб.</td>
+							<td class="amount__calc">
+								<div>
+									<span class="minus">&#45;</span><input type="text" value="1"><span class="plus">&#43;</span>
+								</div>
+							</td>
+							<td class="cart__items-price">
+								<div>
+									<span class="cart-table__final-const">2500 руб.</span>
+									<span class="cart-table__delete"><img src="img/delete.png" alt=""></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<section class="multi-step-form">
+
+					<h2>Для завершения заказа заполните форму - все поля обязательные</h2>
+
+					<div class="steps">
+						<button class="step-active" type="button" disabled>Шаг 1 - Контактные данные</button>
+						<button class="right35" type="button" disabled>Шаг 2 - Доставка</button>
+						<button class="right70" type="button" disabled>Шаг 3 - Оплата</button>
+					</div>
+
+					<form id="cart_form" action="#" method="post">
+						
+						<div  aria-label="Step One" tabindex="-1" class="fieldset" id="step-1">
+							<h3>Укажите контактные данные</h3>
+							<div id="messageBox">
+							</div>
+							<input id="name" type="text" name="name" placeholder="Ваше имя*" required>
+							<input id="tel" type="tel" name="tel" placeholder="Ваш телефон*" required>
+							<input id="email" type="email" name="email" placeholder="Ваш e-mail*" required>
+							<button class="btn-next" type="button" aria-controls="step-2">Перейти к доставке</button>
+						</div>
+						
+						<div aria-label="Step Two" tabindex="-1" class="fieldset" id="step-2">
+							<h3>Способ доставки</h3>
+							<div id="messageBox2"></div>
+							<div class="radio__container">
+								<input id="storage" type="radio" name="radio" value="storage">
+								<label for="storage"><strong class="uppercase">Cамовывоз со склада</strong> (г. Москва, ул. Неверовского, д.10 стр.4, офис 10, метро «Парк Победы»).</label>
+							</div>
+												
+							<div class="radio__container">
+								<input id="courier" type="radio" name="radio" value="courier">
+								<label for="courier"><strong class="uppercase">Доставка курьером</strong> по Москве 350р. <span class="fastest-delivery">Самая быстрая доставка <img src="img/truck.png" alt=""></span></label>
+							</div>
+												
+							<div class="radio__container">
+								<input id="region" type="radio" name="radio" value="region">
+								<label for="region">Доставка в другой регион.*</label>
+							</div>
+							<div class="radio__container">
+								<input id="agreement" type="radio" name="radio" value="agreement">
+								<label for="agreement">Даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a></label>
+							</div>
+												
+							<div class="radio__container">
+								<input id="offers" type="radio" name="radio" value="offers">
+								<label for="offers">Хочу получать специальные предложения.</label>
+							</div>
+							<p>* Доставка в другие регионы осуществляется курьерским службами Dimex, Dostavista, EMS и транспортными компаниями "Деловые линии" и "КИТ".</p>
+							<button class="btn-next" type="button" id="send_contact" aria-controls="step-3">Перейти к оплате</button>
+
+						</div>
+						
+						<div aria-label="Step Three" tabindex="-1" class="fieldset" id="step-3">
+							<p>При получении наличными курьеру</p>
+							<p class="card_pay">Возможность оплаты картой уточняйте при заказе</p>
+							<button type="submit" id="submit_form" data-type="submit">Оплатить</button>
+						</div>
+						
+					</form>
+				</section>
+
+
+<!-- 
+HTML Requirements
+
+1. Include .multi-step-form
+2. Define parents e.g. fieldset
+3. Each parent should own a unique ID with aria-label
+4. Each next/prev button owns aria-controls which points to unique ID of parents
+5. For validation each field should own required attribute
+
+<section class="multi-step-form">
+	<form>
+
+		<fieldset aria-label="Step One" tabindex="-1" id="step-1">
+			...
+			<button class="btn-next" type="button" aria-controls="step-2">Next</button>
+		</fieldset>
+
+		<fieldset aria-label="Step Two" tabindex="-1" id="step-2">
+			...
+			<button class="btn-prev" type="button" aria-controls="step-1">Previous</button>
+			<button class="btn-next" type="button" aria-controls="step-3">Next</button>
+		</fieldset>
+
+		<fieldset aria-label="Step Three" tabindex="-1" id="step-3">
+			...
+			<button type="submit">Submit</button>
+			<button class="btn-edit" type="button">Edit</button>
+			<button type="reset">Start Over</button>
+		</fieldset>
+
+	</form>
+</section>
+-->
+			</div>
+		</div>
+		<!-- @@include icons.html -->
+	</div>
+</div>

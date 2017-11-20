@@ -1,0 +1,51 @@
+.delivery__container {
+	max-width: 960px;
+	width: 85%;
+}
+
+.delivery__title h2,
+.delivery__content h3 {
+	margin-top: 0;
+	font-size: 18px;
+	color: #1C4A96;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.delivery__content h3 {
+	font-size: 16px;
+	text-transform: none;
+}
+
+.delivery__blocks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include breakpoint(max-width 992px) {
+		justify-content: space-around;
+	}
+
+	.delivery__block {
+		width: 48%;
+		margin-top: 30px;
+
+		@include breakpoint(max-width 992px) {
+			min-width: 500px;
+		}
+
+		@include breakpoint(max-width 576px) {
+			min-width: 100%;
+			width: 100%;
+		}
+
+		h4 {
+			margin: 0;
+		}
+
+		p {
+			margin: 10px 0;
+			line-height: 1.5;
+		}
+	}
+}

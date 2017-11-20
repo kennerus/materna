@@ -1,0 +1,138 @@
+.three {
+	position: relative;
+	bottom: 100px;
+	background: url(../img/bottle.png) left top no-repeat;
+    background-size: 11%;
+
+	@include breakpoint(max-width 992px) {
+		top: 100px;
+		bottom: 0;
+		background: none;
+	}
+
+	.pacifier {
+		width: 270px;
+		height: 640px;
+		position: absolute;
+		right: 0;
+		top: 200px;
+		background-image: url(../img/pacifier.png);
+		background-size: 75%;
+		background-repeat: no-repeat;
+		z-index: 0;
+		background-position: right;
+
+		@include breakpoint(max-width 992px) {
+			display: none;
+		}
+	}
+
+	.three__wrap {
+		position: relative;
+		flex-wrap: wrap;
+		z-index: 1;
+
+	    .three__title {
+	    	width: 100%;
+	    	text-align: center;
+
+	    	img {
+	    		@include breakpoint(max-width 992px) {
+	    			width: 100%;
+	    		}
+	    	}
+	    }
+
+	    .three__describe {
+	    	width: 100%;
+	    	margin-top: 80px;
+	    	display: flex;
+	    	justify-content: space-between;
+
+	    	@include breakpoint(max-width 992px) {
+	    		margin-top: 20px;
+	    		justify-content: space-around;
+	    		flex-wrap: wrap;
+
+	    	}
+
+	    	.three__balance {
+	    		max-width: 580px;
+	    		padding: 40px;
+	    		background-color: #FFF;
+	    		outline: 2px dashed #3165a8;
+	    		outline-offset: -15px;
+	    		p {
+	    			font-weight: 700;
+	    			font-size: 17px;
+	    			line-height: 25px;
+	    			color: #053e73;
+	    		}
+	    	}
+
+	    	.three__elements {
+	    		max-width: 550px;
+	    		display: flex;
+	    		flex-direction: column;
+	    		justify-content: space-between;
+
+	    		.three__elements-block {
+	    			min-height: 100px;
+	    			position: relative;
+	    			display: flex;
+   			        justify-content: flex-end;
+   			        align-items: center;
+	    			background-color: #376fb2;
+   			        border-radius: 50px;
+
+   			        @include breakpoint(max-width 992px) {
+   			        	margin-top: 20px;
+   			        }
+
+	    			&:before {
+					    content: '';
+					    position: absolute;
+					    top: 10px;
+					    right: 10px;
+					    bottom: 10px;
+					    left: 10px;
+					    border: 2px dashed #fff;
+					    border-radius: 40px;
+					}
+
+					.block-img {
+						padding: 5px 0 0 5px;
+					}
+
+					.oil {
+						padding-right: 10px;
+					}
+
+					.block-text {
+						position: relative;
+						width: calc(100% - 100px);
+						margin-left: 15px;
+						z-index: 2;
+
+						@include breakpoint(max-width 768px) {
+							width: calc(100% - 90px);
+						}
+
+						p {
+							width: 90%;
+							margin: 15px 0;
+							font-family: 'Open Sans', sans-serif;
+							font-size: 16px;
+							line-height: 22px;
+							color: #f6f6f6;
+
+							@include breakpoint(max-width 768px) {
+								font-size: 14px;
+							}
+						}
+					}
+	    		}
+	    	}
+	    }
+	}
+}

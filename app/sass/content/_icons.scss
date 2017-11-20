@@ -1,0 +1,19 @@
+.icons {
+	padding: 65px 0 100px;
+	.icons__wrap {
+		-webkit-justify-content: space-around;
+		        justify-content: space-around;
+	    text-align: center;
+	    p {
+	    	max-width: 230px;
+	    	margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 31px;
+			text-transform: uppercase;
+	    	color: white;
+	    	text-shadow: 0 0 40px black;
+	    }
+	}
+}

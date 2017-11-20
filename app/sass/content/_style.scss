@@ -1,0 +1,21 @@
+.main {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/background.jpg);
+	background-position-x: center;
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@import 'food';
+@import '_three-in-one';
+@import '_best';
+@import '_feedback-main';
+@import '_icons';
+@import '_catalogue';
+@import '_help';
+@import '_product';
+@import '_contacts';
+@import '_cart';
+@import '_about';
+@import '_delivery';

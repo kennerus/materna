@@ -1,0 +1,92 @@
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<!--для подключения jquary-плагинов-->
+<script src="js/slick.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script type="text/javascript"   src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="js/multi-step-form.js"></script>
+<script src="js/jquery.dotdotdot.js"></script>
+
+<script>
+	$( document ).ready(function() {
+		$().fancybox({
+			selector : '[data-fancybox="img"]',
+			loop     : true
+		});
+		$('.product__content-img').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.product__content-img',
+			dots: false,
+			adaptiveHeight: true,
+			variableWidth: true,
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow:3,
+						adaptiveHeight: false,
+						variableWidth: false
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+						adaptiveHeight: false,
+						variableWidth: false
+					}
+				}
+			]
+		});
+
+		$('.minus').click(function () {
+			var $input = $(this).parent().find('input');
+			var count = parseInt($input.val()) - 1;
+			count = count < 1 ? 1 : count;
+			$input.val(count);
+			$input.change();
+			return false;
+		});
+
+		$('.plus').click(function () {
+			var $input = $(this).parent().find('input');
+			$input.val(parseInt($input.val()) + 1);
+			$input.change();
+			return false;
+		});
+
+		$('#nav-icon1').click(function() {
+			$(this).toggleClass('open');
+			$('.header__nav-menu').toggleClass('expand');
+		});
+
+		$(".feedback__line-clamp").dotdotdot({
+            ellipsis: "\u2026 "
+        });
+
+        $('.help__line-clamp').dotdotdot({
+        	ellipsis: "\u2026 ",
+        	height: 65
+        })
+
+        $(".product__line-clamp").dotdotdot({
+        	ellipsis: "\u2026 ",
+        	height: 180
+        })
+
+	});
+</script>
+
+</body>
+</html>

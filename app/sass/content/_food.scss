@@ -1,0 +1,88 @@
+.food {
+	min-height: 800px;
+	background-image: url(../img/materna-bg.png);
+	background-size: cover;
+	box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
+	.food__wrap {
+		padding-top: 100px;
+
+		@include breakpoint(max-width 992px) {
+			padding-top: 50px;
+		}
+
+		.food__text {
+			.food__title {
+				h1 {
+					margin: 0;
+					font-family: 'Corinthia', sans-serif;
+					font-weight: normal;
+					font-size: 120px;
+					color: #1653a0;
+					line-height: 80px;
+					span {
+						color: #e28648;
+					}
+
+					@include breakpoint(max-width 992px) {
+						text-align: center;
+					}
+
+					@include breakpoint(max-width 576px) {
+						font-size: 100px;
+					}
+				}
+			}
+
+			.food__describe {
+				max-width: 460px;
+				h2 {
+					font-family: 'Lato-Black', sans-serif;
+					font-weight: normal;
+					font-size: 30px;
+					color: #1653a0;
+					text-transform: uppercase;
+				}
+
+				p {
+					max-width: 355px;
+					font-size: 17px;
+					color: #282828;
+				}
+			}
+
+			.order {
+				margin-top: 50px;
+				a {
+					padding: 15px 30px;
+					font-family: 'Lato-Bold', sans-serif;
+					font-size: 23px;
+					background: linear-gradient(to right, #1c539d, #253f7d);
+					color: #FFF;
+					-webkit-border-radius: 50px;
+					        border-radius: 50px;
+					-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.3);
+					        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+					&:hover, &:active, &:focus {
+						background: #1c539d;
+					}
+				}
+			}
+		}
+
+		.food__img {
+			position: relative;
+			top: 100px;
+			right: 20vw;
+			
+			@include breakpoint(max-width 992px) {
+				top: 50px;
+				right: 0;
+			}
+
+			img {
+				min-width: 270px;
+				width: 100%;
+			}
+		}
+	}
+}

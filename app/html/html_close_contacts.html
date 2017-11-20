@@ -1,0 +1,41 @@
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<!--для подключения jquary-плагинов-->
+<script src="js/slick.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script type="text/javascript"   src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="js/multi-step-form.js"></script>
+
+<script>
+	$( document ).ready(function() {
+
+		$('#nav-icon1').click(function() {
+			$(this).toggleClass('open');
+			$('.header__nav-menu').toggleClass('expand');
+		});
+
+		$('#contacts__form').validate({
+			rules : {
+	            contacts__tel : {
+	            	required : true,
+	            	number : true
+	            }
+			},
+			messages: {
+		    	contacts__name: "Пожалуйста введите имя",
+		    	contacts__email: {
+		    		required: "Пожалуйста введите e-mail"
+		    	},
+		    	contacts__tel: {
+		        	required : "Пожалуйста введите телефон	"
+		        }
+		    },
+		})
+	});
+</script>
+
+
+</body>
+</html>

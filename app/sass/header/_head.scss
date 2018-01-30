@@ -1,25 +1,22 @@
 .header {
 	margin-bottom: 5px;
+	padding-top: 20px;
+	background-image: url(../img/header-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	.header__content-wrap {
 		min-height: 175px;
 		justify-content: space-between;
+		align-items: center;
 		flex-wrap: wrap;
-		text-align: center;
 
 		@include breakpoint(max-width 1200px) {
 			justify-content: space-around;
-			margin-top: 15px;
 		}
 
 		@include breakpoint(max-width 992px) {
-			&>div {
-				margin-right: 10px;
 
-				&:last-child {
-					margin: 0;
-				}
-			}
 		}
 
 		@include breakpoint(max-width 576px) {
@@ -33,26 +30,50 @@
 		}
 
 		.header__logo {
+			margin-right: 120px;
+
+			@include breakpoint(max-width 1200px) {
+				margin-right: 0;
+			}
+
+			@include breakpoint(max-width 992px) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				order: -1;
+				width: 100%;
+			}
 			h3 {
-				margin: 10px 0;
+				margin: 0;
 				font-weight: 800;
-				font-size: 24px;
-				color: #253a78;
+				font-size: 18px;
+				color: #26346e;
 			}
 
 			img {
-				width: 160px;
-				height: 60px;
+				width: 167px;
+				height: 75px;
 			}
 		}
 
 		.header__search {
-			max-width: 580px;
-			width: 100%;
-			
-			@include breakpoint(max-width 1200px) {
-				order: 2;
-				margin-top: 10px;
+			width: 440px;
+
+			@include breakpoint(max-width 992px) {
+				width: 50%;
+			}
+
+			@include breakpoint(max-width 630px) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				margin-top: 20px;
+
+				h2,
+				p {
+					text-align: center;
+				}
 			}
 
 			@include breakpoint(max-width 576px) {
@@ -61,63 +82,102 @@
 
 			h2 {
 				margin: 0;
+				font-family: 'AppetiteR', serif;
 				font-weight: 800;
-				font-size: 30px;
-				color: #ff6600;
-			}
-
-			p {
-				margin: 0 0 15px 0;
 				font-size: 24px;
-				color: #27356F;
+				color: #3982e1;
 			}
 
-			#search {
-				max-width: 520px;
-				width: 86%;
-				margin-top: 5px;
-				padding: 2px 10px;
-				border: 1px solid #a8a8a8;
-
-				@include breakpoint(max-width 576px) {
-					width: 100%;
-				}
+			.header__delivery {
+				font-weight: 700;
+				font-size: 16px;
+				color: #224c92;
 			}
 
-			label {
-				color: #071e41;
-				font-size: 14px;
-			}
-
-			button {
-				padding: 2px 10px;
-				background: linear-gradient(to bottom, #fff, #e0e0e0);
-				border: 1px solid #a8a8a8;
-
-				@include breakpoint(max-width 576px) {
-					margin-top: 10px;
-				}
+			.header__address {
+				width: 230px;
+				font-weight: 300;
+				font-size: 13px;
+				color: #224c92;
 			}
 		}
 
 		.header__callback {
-			text-align: right;
+			display: flex;
+			
+			@include breakpoint(max-width 992px) {
+				justify-content: flex-end;
+				width: 50%;
+			}
+
+			@include breakpoint(max-width 630px) {
+				width: 100%;
+				margin-top: 20px;
+				justify-content: center;
+			}
 
 			.header__callback-call {
-				margin-bottom: 20px;
-			}
-
-			p {
-				margin: 0;
 				display: flex;
-				-webkit-align-items: center;
-				        align-items: center;
-				color: #071e41;
+				flex-direction: column;
+				margin-right: 20px;
 			}
 
-			img {
-				margin-left: 5px;
+			.header__callback-schedule {
+				width: 230px;
+				padding-left: 8px;
+
+				p {
+					margin: 0;
+					font-size: 14px;
+					color: #224c92;
+				}
+
+				span {
+					margin-left: 4px;
+					color: #3982e1;
+				}
 			}
+
+			.header__form {
+				position: relative;
+				width: 250px;
+				margin-top: 20px;
+
+				.search__header {
+					padding: 5px 15px 3px;
+					border-radius: 17px;
+					border: 1px solid #b7defd;
+					background-color: #edf6fe;
+
+					&::placeholder {
+						color: #5c636d;
+						font-size: 13px;
+						font-weight: 300;
+						opacity: 1;
+					}
+				}
+
+				.submit__header_label {
+					position: absolute;
+					top: 6px;
+					right: 40px;
+				}
+
+				.submit__header {
+					position: absolute;
+					width: 1px;
+					height: 1px;
+					z-index: -999;
+				}
+			}
+
+			.header__callback-soc {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-end;
+			}
+
 		}
 	}
 }

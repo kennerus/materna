@@ -3,7 +3,7 @@
 	display: flex;
 	background-color: #224C92;
 
-	@include breakpoint(max-width 1200px) {
+	@include breakpoint(max-width 992px) {
 		margin-top: 20px;
 	}
 

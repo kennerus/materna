@@ -4,6 +4,16 @@
 	background-image: url(../img/header-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	
+	.mob-contacts {
+		display: none;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+		@include breakpoint(max-width 630px) {
+			display: block;
+		}
+	}
 
 	.header__content-wrap {
 		min-height: 175px;
@@ -17,6 +27,9 @@
 
 		@include breakpoint(max-width 992px) {
 
+		}
+		@include breakpoint(max-width 630px) {
+			min-height: inherit;
 		}
 
 		@include breakpoint(max-width 576px) {
@@ -53,6 +66,10 @@
 			img {
 				width: 167px;
 				height: 75px;
+				@include breakpoint(max-width 450px) {
+					width: 90px;
+					height: auto;
+				}
 			}
 		}
 
@@ -68,7 +85,6 @@
 				flex-direction: column;
 				align-items: center;
 				width: 100%;
-				margin-top: 20px;
 
 				h2,
 				p {
@@ -86,12 +102,18 @@
 				font-weight: 800;
 				font-size: 24px;
 				color: #3982e1;
+				@include breakpoint(max-width 630px) {
+					font-size: 18px;
+				}
 			}
 
 			.header__delivery {
 				font-weight: 700;
 				font-size: 16px;
 				color: #224c92;
+				@include breakpoint(max-width 630px) {
+					display: none;
+				}
 			}
 
 			.header__address {
@@ -99,6 +121,9 @@
 				font-weight: 300;
 				font-size: 13px;
 				color: #224c92;
+				@include breakpoint(max-width 630px) {
+					display: none;
+				}
 			}
 		}
 
@@ -111,6 +136,7 @@
 			}
 
 			@include breakpoint(max-width 630px) {
+				display: none;
 				width: 100%;
 				margin-top: 20px;
 				justify-content: center;

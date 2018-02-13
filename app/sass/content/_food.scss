@@ -1,6 +1,6 @@
 .food {
 	min-height: 800px;
-	background-image: url(../img/materna-bg.png);
+	background: url(../img/materna-bg.png) center center no-repeat;
 	background-size: cover;
 	box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
 	.food__wrap {
@@ -8,6 +8,9 @@
 
 		@include breakpoint(max-width 992px) {
 			padding-top: 50px;
+		}
+		@include breakpoint(max-width 630px) {
+			padding-top: 10px;
 		}
 
 		.food__text {
@@ -19,16 +22,20 @@
 					font-size: 120px;
 					color: #1653a0;
 					line-height: 80px;
+					@include breakpoint(max-width 630px) {
+						font-size: 70px;
+					}
+					@include breakpoint(max-width 450px) {
+						margin-top: 10px;
+						font-size: 50px;
+						line-height: 40px;
+					}
 					span {
 						color: #e28648;
 					}
 
 					@include breakpoint(max-width 992px) {
 						text-align: center;
-					}
-
-					@include breakpoint(max-width 576px) {
-						font-size: 100px;
 					}
 				}
 			}
@@ -41,6 +48,9 @@
 					font-size: 30px;
 					color: #1653a0;
 					text-transform: uppercase;
+					@include breakpoint(max-width 630px) {
+						font-size: 20px;
+					}
 				}
 
 				p {
@@ -52,6 +62,9 @@
 
 			.order {
 				margin-top: 50px;
+				@include breakpoint(max-width 450px) {
+					margin-top: 30px;
+				}
 				a {
 					padding: 15px 30px;
 					font-family: 'Lato-Bold', sans-serif;

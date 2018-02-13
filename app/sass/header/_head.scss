@@ -4,6 +4,9 @@
 	background-image: url(../img/header-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	@include breakpoint(max-width 450px) {
+		padding-top: 10px;
+	}
 	
 	.mob-contacts {
 		display: none;

@@ -10,6 +10,8 @@
 	@include breakpoint(max-width 576px) {
 		max-width: 100vw;
 		width: 100vw;
+		margin-top: 10px;
+		height: 40px;
 	}
 
 	.header__nav {
@@ -20,6 +22,10 @@
 			top: 0;
 			left: 0;
 			width: 100%;
+		}
+		@include breakpoint(max-width 576px) {
+			display: flex;
+			align-items: center;
 		}
 
 		.header__nav-menu {
@@ -95,6 +101,9 @@
 
 		@include breakpoint(max-width 1200px) {
 			display: block;
+		}
+		@include breakpoint(max-width 576px) {
+			flex-shrink: 0;
 		}
 
 		&.open {

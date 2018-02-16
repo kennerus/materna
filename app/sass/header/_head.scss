@@ -78,7 +78,9 @@
 
 		.header__search {
 			width: 440px;
-
+			@include breakpoint(max-width 1200px) {
+				width: 300px;
+			}
 			@include breakpoint(max-width 992px) {
 				width: 50%;
 			}
@@ -132,10 +134,10 @@
 
 		.header__callback {
 			display: flex;
+			flex-direction: column;
 			
 			@include breakpoint(max-width 992px) {
 				justify-content: flex-end;
-				width: 50%;
 			}
 
 			@include breakpoint(max-width 630px) {
@@ -147,18 +149,34 @@
 
 			.header__callback-call {
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				margin-right: 20px;
 			}
 
 			.header__callback-schedule {
 				width: 243px;
 				padding-left: 8px;
-
+				.header__callback-schedule-btn {
+					margin-top: 5px;
+					margin-bottom: 10px;
+					padding: 3px 20px;
+					background-color: #3982e1;
+					border-radius: 10px;
+					border: none;
+					font-size: 12px;
+					color: #fff;
+				}
 				p {
+					display: flex;
+					align-items: center;
 					margin: 0;
 					font-size: 14px;
 					color: #224c92;
+					.header__callback--icon {
+						width: 20px;
+						height: 20px;
+						margin-right: 5px;
+					}
 				}
 
 				span {
@@ -169,7 +187,7 @@
 
 			.header__form {
 				position: relative;
-				width: 250px;
+				width: 270px;
 				margin-top: 20px;
 
 				.search__header {
@@ -177,7 +195,7 @@
 					border-radius: 17px;
 					border: 1px solid #b7defd;
 					background-color: #edf6fe;
-
+					width: 100%;
 					&::placeholder {
 						color: #5c636d;
 						font-size: 13px;
@@ -189,7 +207,7 @@
 				.submit__header_label {
 					position: absolute;
 					top: 5px;
-					right: 45px;
+					right: 10px;
 				}
 
 				.submit__header {

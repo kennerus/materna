@@ -134,7 +134,11 @@
 		.header__callback {
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-end;
+			align-items: flex-end;
+			
+			@include breakpoint(max-width 992px) {
+				justify-content: flex-end;
+			}
 
 			@include breakpoint(max-width 630px) {
 				display: none;

@@ -40,8 +40,7 @@
 
 			a {
 				height: 100%;
-				width: 70%;
-				padding: 0;
+				padding: 0 25px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -64,7 +63,6 @@
 
 			.cart {
 				justify-content: space-around;
-				width: 100%;
 				max-height: 60px;
 				background-color: #e75e00;
 				box-shadow: 0 5px 20px -15px black;

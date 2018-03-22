@@ -10,6 +10,10 @@
 		background: none;
 	}
 
+	@include breakpoint(max-width 450px) {
+		top: 0;
+	}
+
 	.pacifier {
 		width: 270px;
 		height: 640px;
@@ -64,9 +68,13 @@
 	    		outline-offset: -15px;
 	    		p {
 	    			font-weight: 700;
-	    			font-size: 17px;
+	    			font-size: 21px;
 	    			line-height: 25px;
 	    			color: #053e73;
+
+	    			@include breakpoint(max-width 576px) {
+	    				font-size: 17px;
+	    			}
 	    		}
 	    	}
 

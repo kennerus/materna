@@ -1,27 +1,9 @@
-// var message="Правый клик запрещен!";
-// function clickIE4(){
-//       if (event.button==2){
-//             return false;
-//       }
-// }
-// function clickNS4(e){
-//       if (document.layers||document.getElementById&&!document.all){
-//             if (e.which==2||e.which==3){
-//                   return false;
-//             }
-//       }
-// }
-// if (document.layers){
-//       document.captureEvents(Event.MOUSEDOWN);
-//       document.onmousedown=clickNS4;
-// }
-// else if (document.all&&!document.getElementById){
-//       document.onmousedown=clickIE4;
-// }
-// document.oncontextmenu=new Function("return false")
-
 /*--  Запрет правого клика по картинкам  --*/
 var imgs = $('img');
+
+$(function() {
+    $('#tel, .callback__input, .contacts__tel').inputmask({"mask": "+9 (999) 999-9999"})
+})
 
 if (imgs.length > 0) {
     imgs.each(function () {
@@ -30,6 +12,26 @@ if (imgs.length > 0) {
         }
     })
 }
+
+$('.help__popular').slick({
+    slidesToShow: 3,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                arrows: false,
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                arrows: false,
+                slidesToShow: 1
+            }
+        }
+    ]
+});
 
 /*--  Слайдер на странице отзывов  --*/
 $('.delivery__slider').slick({
@@ -65,4 +67,29 @@ $('.delivery__slider').slick({
             }
         }
     ]
+});
+
+$(document).on('click', '.js_callback', function() {
+    $('.callback').fadeIn('fast');
+});
+
+$(document).on('click', '.callback__overlay, .callback__close', function() {
+    $('.callback').fadeOut('fast');
+});
+
+$('#callback').validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      callback: {
+        required : true,
+        number : true
+      },
+    },
+    // Specify validation error messages
+    messages: {
+      callback: "Пожалуйста, введите ваш телефон",
+    },
 });

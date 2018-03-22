@@ -132,13 +132,13 @@
             }
 
             if (!form.validateViews(currentIndex, targetIndex - currentIndex, function(i) {
-                    if (!settings.allowUnvalidatedStep) {
-                        form.setActiveView(i);
-                        return false;
-                    }
+                if (!settings.allowUnvalidatedStep) {
+                    form.setActiveView(i);
+                    return false;
+                }
 
-                    return true;
-                })) {
+                return true;
+            })) {
                 if (!settings.allowUnvalidatedStep) {
                     return;
                 }
@@ -200,7 +200,7 @@
 
                 this.initNavButton = function(type) {
                     var element = this.navigation.find("button[data-type='" + type + "'], input[type='button']"),
-                        type;
+                    type;
                     if (element.length === 0) {
                         element = $("<button/>", {
                             "class": msfCssClasses.navButton,
@@ -229,65 +229,65 @@
                 if (index !== form.views.length - 1) {
                     $(view).find(':input').not('textarea').keypress(function(e) {
                         if (e.which === 13) // Enter key = keycode 13
-                        {
-                            form.nextNavButton.click();
-                            return false;
-                        }
-                    });
+                            {
+                                form.nextNavButton.click();
+                                return false;
+                            }
+                        });
                 }
 
                 $(view).on('show', function(e) {
                     if (this !== e.target)
                         return;
 
-                    var view = e.target;
-                    $.data(view, msfJqueryData.visited, true);
+                        var view = e.target;
+                        $.data(view, msfJqueryData.visited, true);
 
-                    var index = form.views.index(view);
-                    var step = form.steps[index];
+                        var index = form.views.index(view);
+                        var step = form.steps[index];
 
-                    $(step).addClass(msfCssClasses.statuses.stepActive);
-                    //form.setStatusCssClass(step, msfCssClasses.statuses.stepActive);
+                        $(step).addClass(msfCssClasses.statuses.stepActive);
+                        //form.setStatusCssClass(step, msfCssClasses.statuses.stepActive);
 
-                    //choose which navigation buttons should be displayed based on index of view 
-                    if (index > 0 && !settings.hideBackButton) {
-                        form.backNavButton.show();
-                    }
+                        //choose which navigation buttons should be displayed based on index of view 
+                        if (index > 0 && !settings.hideBackButton) {
+                            form.backNavButton.show();
+                        }
 
-                    if (index == form.views.length - 1) {
-                        form.nextNavButton.hide();
-                        form.submitNavButton.show();
-                    }
-                    else {
-                        form.submitNavButton.hide();
-                        form.nextNavButton.show();
-                    }
-                });
+                        if (index == form.views.length - 1) {
+                            form.nextNavButton.hide();
+                            form.submitNavButton.show();
+                        }
+                        else {
+                            form.submitNavButton.hide();
+                            form.nextNavButton.show();
+                        }
+                    });
 
                 $(view).on('hide', function(e) {
                     if (this !== e.target)
                         return;
 
-                    var index = form.views.index(e.target);
-                    var step = form.steps[index];
+                        var index = form.views.index(e.target);
+                        var step = form.steps[index];
 
-                    $(step).removeClass(msfCssClasses.statuses.stepActive);
+                        $(step).removeClass(msfCssClasses.statuses.stepActive);
 
-                    if ($.data(e.target, msfJqueryData.validated) && $.data(e.target, msfJqueryData.visited)) {
-                        form.setStatusCssClass(step, msfCssClasses.statuses.stepComplete);
-                    }
-                    else if ($.data(e.target, msfJqueryData.visited)) {
-                        form.setStatusCssClass(step, msfCssClasses.statuses.stepIncomplete);
-                    }
-                    else {
-                        form.setStatusCssClass(step, "");
-                    }
+                        if ($.data(e.target, msfJqueryData.validated) && $.data(e.target, msfJqueryData.visited)) {
+                            form.setStatusCssClass(step, msfCssClasses.statuses.stepComplete);
+                        }
+                        else if ($.data(e.target, msfJqueryData.visited)) {
+                            form.setStatusCssClass(step, msfCssClasses.statuses.stepIncomplete);
+                        }
+                        else {
+                            form.setStatusCssClass(step, "");
+                        }
 
-                    //hide all navigation buttons, display choices will be set on show event
-                    form.backNavButton.hide();
-                    form.nextNavButton.hide();
-                    form.submitNavButton.hide();
-                });
+                        //hide all navigation buttons, display choices will be set on show event
+                        form.backNavButton.hide();
+                        form.nextNavButton.hide();
+                        form.submitNavButton.hide();
+                    });
 
                 //initially hide each view
                 $(view).hide();
@@ -398,7 +398,7 @@
         var self = this;
         $(container).find(':input').each(function() {
             if (!self.element($(this))) ok = false;
-        });
+            });
         return ok;
     };
 

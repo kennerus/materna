@@ -2,6 +2,7 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <!--для подключения jquary-плагинов-->
 <script src="js/slick.js"></script>
+<script src="js/jquery.inputmask.bundle.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
 <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 <script type="text/javascript"   src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
@@ -26,10 +27,12 @@
 			messages: {
 		    	contacts__name: "Пожалуйста введите имя",
 		    	contacts__email: {
-		    		required: "Пожалуйста введите e-mail"
+		    		required: "Пожалуйста введите e-mail",
+		    		email: "Пожалуйста введите адрес электронной почты"
 		    	},
 		    	contacts__tel: {
-		        	required : "Пожалуйста введите телефон	"
+		        	required : "Пожалуйста введите телефон",
+		        	number: "Пожалуйста введите телефон"
 		        }
 		    },
 		})

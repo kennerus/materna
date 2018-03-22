@@ -155,16 +155,8 @@
 			.header__callback-schedule {
 				width: 243px;
 				padding-left: 8px;
-				.header__callback-schedule-btn {
-					margin-top: 5px;
-					margin-bottom: 10px;
-					padding: 3px 20px;
-					background-color: #3982e1;
-					border-radius: 10px;
-					border: none;
-					font-size: 12px;
-					color: #fff;
-				}
+
+				
 				p {
 					display: flex;
 					align-items: center;
@@ -224,5 +216,138 @@
 			}
 
 		}
+	}
+}
+
+.callback {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 75, 140, 0.4);
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 320px;
+		height: 205px;
+		padding: 30px 40px;
+		background-color: #eafcfe;
+		border-radius: 5px;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 18px;
+		color: #1c4a93;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 8px 15px;
+		border-radius: 18px;
+		border: 1px solid rgba(0, 75, 140, 0.4);
+
+		&_submit {
+			width: auto;
+			margin-top: 20px;
+			background-color: #224689;
+			color: white;
+			cursor: pointer;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: 18px;
+		height: 18px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+
+		svg {
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
+
+#callback-error {
+	margin-top: 5px;
+	font-size: 14px;
+
+	& ~ .callback__input_submit {
+		margin-top: 10px;
+	}
+}
+
+.header__callback-schedule-btn {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 3px 20px;
+	background-color: #3982e1;
+	border-radius: 10px;
+	border: none;
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.header__phones-mob {
+	display: none;
+
+	@include breakpoint(max-width 630px) {
+		display: flex;
+		align-items: center;
+		
+
+
+	}
+}
+.header__phone_mob {
+	color: #3982e1;
+	margin-right: 5px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.header__title_desktop {
+	@include breakpoint(max-width 768px) {
+		display: none;
+	}
+}
+
+.header__title_mobile {
+	display: none;
+
+	@include breakpoint(max-width 768px) {
+		display: inline-block;
 	}
 }

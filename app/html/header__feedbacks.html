@@ -3,7 +3,8 @@
 	<div class="header__content-wrap wrap">
 		
 		<div class="header__search">
-			<h2>Детское питание Матерна</h2>
+			<h2 class="header__title_desktop">Детское питание Матерна</h2>
+			<h2 class="header__title_mobile">Интернет-магазин детского питания</h2>
 			<p class="header__delivery">В наличии в Москве с доставкой по России</p>
 			<p class="header__address">Москва, ул. Неверовского, д.10 стр.4, офис 10, метро «Парк Победы»</p>
 		</div>
@@ -17,25 +18,25 @@
 			<div class="header__callback-call">
 				<div class="header__callback-schedule">
 					<p><strong>Звоните: </strong><span> +7 (499) 948-88-00</span></p>
-					<button class="header__callback-schedule-btn">Заказать обратный звонок</button>
+					<button class="header__callback-schedule-btn js_callback">Заказать обратный звонок</button>
 					<p>
 						<img src="img/icons/viber.png" alt="" class="header__callback--icon">
 						<img src="img/icons/whatsapp.png" alt="" class="header__callback--icon">
 						<span> +7 (925) 732-84-11</span>
 					</p>
-					<p>Ежедневно с<strong><span>9:00 до 19:00</span></strong></p>
+					<p>Ежедневно с<strong><span>10:00 до 19:00</span></strong></p>
 				</div>
 				
 				<div class="header__callback-soc">
-					<a href="https://instagram.com">
+					<a href="https://www.instagram.com/materna.shop/" target="_blank">
 						<img src="img/insta-ico-h.png" alt="">
 					</a>
 
-					<a href="https://facebook.com">
+					<a href="https://www.facebook.com/maternashop/" target="_blank">
 						<img src="img/fb-ico-h.png" alt="">
 					</a>
 
-					<a href="https://vk.com">
+					<a href="https://vk.com/maternashop" target="_blank">
 						<img src="img/vk-ico-h.png" alt="">
 					</a>
 				</div>
@@ -68,6 +69,28 @@
                 </nav>
             </div>
 		</div>
+	</div>
+
+	<div class="callback">
+		<div class="callback__overlay"></div>
+		<div class="callback__content">
+			<button class="callback__close">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+				<g>
+					<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+					c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+					C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+					s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+				</g>
+			</svg>
+		</button>
+		<h3 class="callback__title">Обратный звонок</h3>
+
+		<form id="callback" class="callback__form">
+			<input type="text" class="callback__input" name="callback" placeholder="Ваш телефон*">
+			<input type="submit" class="callback__input callback__input_submit" value="Отправить">
+		</form>
 	</div>
 </header>
 <!-- close .header -->

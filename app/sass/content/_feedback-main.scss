@@ -1,5 +1,9 @@
 .feedback-main {
 	margin: 50px 0 0;
+
+	@include breakpoint(max-width 450px) {
+		margin: 0;
+	}
 	.feedback-main__wrap {
 		background-color: rgba(255,255,255,0.9);
 		min-height: 305px;
@@ -52,6 +56,7 @@
 
 }
 .delivery__slider {
+	height: 560px;
 	.slick-next:before,
 	.slick-prev:before {
 		content: '';

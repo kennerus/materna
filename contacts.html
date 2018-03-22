@@ -8,6 +8,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>Матерна</title>
+    <link href="img/web.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/libs.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css">
@@ -26,9 +27,15 @@
 	<div class="header__content-wrap wrap">
 		
 		<div class="header__search">
-			<h2>Детское питание Матерна</h2>
+			<h2 class="header__title_desktop">Детское питание Матерна</h2>
+			<h2 class="header__title_mobile">Интернет-магазин детского питания</h2>
 			<p class="header__delivery">В наличии в Москве с доставкой по России</p>
 			<p class="header__address">Москва, ул. Неверовского, д.10 стр.4, офис 10, метро «Парк Победы»</p>
+			<div class="header__phones-mob">
+				<a class="header__phone_mob" href="viber://chat?number=79257328411" target="_blank"><img src="img/icons/viber.png" alt=""></a>
+				<a class="header__phone_mob" href="https://api.whatsapp.com/send?phone=79257328411" target="_blank"><img src="img/icons/whatsapp.png" alt=""></a>
+				<a class="header__phone_mob" href="tel:+79257328411"> +7 (925) 732-84-11</a>
+			</div>
 		</div>
 
 		<div class="header__logo">
@@ -40,25 +47,25 @@
 			<div class="header__callback-call">
 				<div class="header__callback-schedule">
 					<p><strong>Звоните: </strong><span> +7 (499) 948-88-00</span></p>
-					<button class="header__callback-schedule-btn">Заказать обратный звонок</button>
+					<button class="header__callback-schedule-btn js_callback">Заказать обратный звонок</button>
 					<p>
 						<img src="img/icons/viber.png" alt="" class="header__callback--icon">
 						<img src="img/icons/whatsapp.png" alt="" class="header__callback--icon">
 						<span> +7 (925) 732-84-11</span>
 					</p>
-					<p>Ежедневно с<strong><span>9:00 до 19:00</span></strong></p>
+					<p>Ежедневно с<strong><span>10:00 до 19:00</span></strong></p>
 				</div>
 				
 				<div class="header__callback-soc">
-					<a href="https://instagram.com">
+					<a href="https://www.instagram.com/materna.shop/" target="_blank">
 						<img src="img/insta-ico-h.png" alt="">
 					</a>
 
-					<a href="https://facebook.com">
+					<a href="https://www.facebook.com/maternashop/" target="_blank">
 						<img src="img/fb-ico-h.png" alt="">
 					</a>
 
-					<a href="https://vk.com">
+					<a href="https://vk.com/maternashop" target="_blank">
 						<img src="img/vk-ico-h.png" alt="">
 					</a>
 				</div>
@@ -92,6 +99,28 @@
             </div>
 		</div>
 	</div>
+
+	<div class="callback">
+		<div class="callback__overlay"></div>
+		<div class="callback__content">
+			<button class="callback__close">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve">
+				<g>
+					<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+					c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+					C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+					s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+				</g>
+			</svg>
+		</button>
+		<h3 class="callback__title">Обратный звонок</h3>
+
+		<form id="callback" class="callback__form">
+			<input type="text" class="callback__input" name="callback" placeholder="Ваш телефон*">
+			<input type="submit" class="callback__input callback__input_submit" value="Отправить">
+		</form>
+	</div>
 </header>
 <!-- close .header -->
 
@@ -117,14 +146,14 @@
 					<p>Москва, ул. Неверовского, д.10 стр.4, офис 10, метро «Парк Победы»</p>
 					<p>Звоните: +7 (499) 948-88-00</p>
 					<p>Пишите в Viber и WhatsApp +7 (925) 732 84 11</p>
-					<p>Ежедневно с 9:00 до 19:00</p>
+					<p>Ежедневно с 10:00 до 19:00</p>
 				</div>
 				<div class="contacts__social">
-					<a href="#"><img src="img/wup-o.jpg" alt=""></a>
-					<a href="#"><img src="img/viber-o.jpg" alt=""></a>
-					<a href="#"><img src="img/insta-o.jpg" alt=""></a>
-					<a href="#"><img src="img/fb-o.jpg" alt=""></a>
-					<a href="#"><img src="img/vk-o.jpg" alt=""></a>
+					<a href="https://api.whatsapp.com/send?phone=79257328411" target="_blank"><img src="img/wup-o.jpg" alt=""></a>
+					<a href="viber://chat?number=79257328411" target="_blank"><img src="img/viber-o.jpg" alt=""></a>
+					<a href="https://www.instagram.com/materna.shop/" target="_blank"><img src="img/insta-o.jpg" alt=""></a>
+					<a href="https://www.facebook.com/maternashop/" target="_blank"><img src="img/fb-o.jpg" alt=""></a>
+					<a href="https://vk.com/maternashop" target="_blank"><img src="img/vk-o.jpg" alt=""></a>
 				</div>
 			</div>
 			<div class="contact-us">
@@ -132,7 +161,7 @@
 				<div class="contacts__form">
 					<form action="" id="contacts__form">
 						<input type="text" name="contacts__name" placeholder="Ваше имя*" required>
-						<input type="tel" name="contacts__tel" placeholder="Ваш телефон*" required>
+						<input class="contacts__tel" type="tel" name="contacts__tel" placeholder="Ваш телефон*" required>
 						<input type="email" name="contacts__email" placeholder="Ваш e-mail*" required>
 						<textarea name="contacts__text" placeholder="Ваше сообщение"></textarea>
 						<div class="contacts__checkbox">
@@ -151,66 +180,102 @@
 			</div>
 		</div>
 		<div class="contacts__map">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7765bf53780e97f07226943cab027b9126bb91bd2ee32fc91e97575bcb8ff512&amp;width=100%25&amp;height=420&amp;lang=ru_UA&amp;scroll=true"></script>
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af9ca6615ee0335aceba602f08bf991b334f1d15c9f9823124b98357e6c40a771&amp;width=100%25&amp;height=420&amp;lang=ru_UA&amp;scroll=true"></script>
 		</div>
 	</div>
 	<div class="help__wrap wrap popular">
 		<h2>Популярные товары</h2>
 		<div class="help__popular">
-				<div class="best__product">
-					<div class="product-img">
-						<img src="img/item.png">
-					</div>
-					<div class="product-title">
-						<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
-						<p>от 6 до 12 месяцев, 700 г.</p>
-					</div>
-					<div class="product-price">
-						<p>3000 руб.</p>
-					</div>
-					<div class="product-buy">
-						<a href="#">Купить в 1 клик</a>
-					</div>
-					<div class="product-to-cart">
-						<a href="#">Добавить в корзину</a>
-					</div>
+			<div class="best__product">
+				<div class="product-img">
+					<img src="img/item.png">
 				</div>
-				<div class="best__product">
-					<div class="product-img">
-						<img src="img/item.png">
-					</div>
-					<div class="product-title">
-						<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
-						<p>от 6 до 12 месяцев, 700 г.</p>
-					</div>
-					<div class="product-price">
-						<p>3000 руб.</p>
-					</div>
-					<div class="product-buy">
-						<a href="#">Купить в 1 клик</a>
-					</div>
-					<div class="product-to-cart">
-						<a href="#">Добавить в корзину</a>
-					</div>
+				<div class="product-title">
+					<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
+					<p>от 6 до 12 месяцев, 700 г.</p>
 				</div>
-				<div class="best__product">
-					<div class="product-img">
-						<img src="img/item.png">
-					</div>
-					<div class="product-title">
-						<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
-						<p>от 6 до 12 месяцев, 700 г.</p>
-					</div>
-					<div class="product-price">
-						<p>3000 руб.</p>
-					</div>
-					<div class="product-buy">
-						<a href="#">Купить в 1 клик</a>
-					</div>
-					<div class="product-to-cart">
-						<a href="#">Добавить в корзину</a>
-					</div>
+				<div class="product-price">
+					<p>3000 руб.</p>
 				</div>
+				<div class="product-buy">
+					<a href="#">Купить в 1 клик</a>
+				</div>
+				<div class="product-to-cart">
+					<a href="#">Добавить в корзину</a>
+				</div>
+			</div>
+			<div class="best__product">
+				<div class="product-img">
+					<img src="img/item.png">
+				</div>
+				<div class="product-title">
+					<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
+					<p>от 6 до 12 месяцев, 700 г.</p>
+				</div>
+				<div class="product-price">
+					<p>3000 руб.</p>
+				</div>
+				<div class="product-buy">
+					<a href="#">Купить в 1 клик</a>
+				</div>
+				<div class="product-to-cart">
+					<a href="#">Добавить в корзину</a>
+				</div>
+			</div>
+			<div class="best__product">
+				<div class="product-img">
+					<img src="img/item.png">
+				</div>
+				<div class="product-title">
+					<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
+					<p>от 6 до 12 месяцев, 700 г.</p>
+				</div>
+				<div class="product-price">
+					<p>3000 руб.</p>
+				</div>
+				<div class="product-buy">
+					<a href="#">Купить в 1 клик</a>
+				</div>
+				<div class="product-to-cart">
+					<a href="#">Добавить в корзину</a>
+				</div>
+			</div>
+			<div class="best__product">
+				<div class="product-img">
+					<img src="img/item.png">
+				</div>
+				<div class="product-title">
+					<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
+					<p>от 6 до 12 месяцев, 700 г.</p>
+				</div>
+				<div class="product-price">
+					<p>3000 руб.</p>
+				</div>
+				<div class="product-buy">
+					<a href="#">Купить в 1 клик</a>
+				</div>
+				<div class="product-to-cart">
+					<a href="#">Добавить в корзину</a>
+				</div>
+			</div>
+			<div class="best__product">
+				<div class="product-img">
+					<img src="img/item.png">
+				</div>
+				<div class="product-title">
+					<h4><a href="product.html">Молочная смесь Materna Classik Milk</a></h4>
+					<p>от 6 до 12 месяцев, 700 г.</p>
+				</div>
+				<div class="product-price">
+					<p>3000 руб.</p>
+				</div>
+				<div class="product-buy">
+					<a href="#">Купить в 1 клик</a>
+				</div>
+				<div class="product-to-cart">
+					<a href="#">Добавить в корзину</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -249,10 +314,9 @@
     		<div class="footer__social">
     			<h2>Присоединяйтесь</h2>
     			<div class="footer__social-icons">
-    				<a href="https://vk.com/"><img src="img/vk-ico.png" alt="VK"></a>
-    				<a href="https://ok.ru/"><img src="img/ok-ico.png" alt="OK"></a>
-    				<a href="https://www.facebook.com/"><img src="img/fb-ico.png" alt="FB"></a>
-    				<a href="https://instagram.com/"><img src="img/insta-ico.png" alt="Insta"></a>
+    				<a href="https://vk.com/maternashop/" target="_blank"><img src="img/vk-ico.png" alt="VK"></a>
+    				<a href="https://www.facebook.com/maternashop/" target="_blank"><img src="img/fb-ico.png" alt="FB"></a>
+    				<a href="https://www.instagram.com/materna.shop/" target="_blank"><img src="img/insta-ico.png" alt="Insta"></a>
     			</div>
     		</div>
     		<div class="footer__address">
@@ -268,11 +332,11 @@
     			<div class="schedule">
     				<div><i class="demo-icon icon-phone-1"></i></div>
     				<div class="every-day">
-    					<p>Ежедневно с 9:00 до 19:00 <br> <span>+7 (499) 948-88-00</span></p>
+    					<p>Ежедневно с 10:00 до 19:00 <br> <span>+7 (499) 948-88-00</span></p>
     				</div>
     			</div>
     			<p>
-    				<button id="order" href="#">Заказать звонок</button>
+    				<button id="order" class="js_callback">Заказать звонок</button>
     			</p>
     			<div class="margin-top20">
     				<img src="img/what-ico.png" width="25" height="25">
@@ -303,6 +367,7 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <!--для подключения jquary-плагинов-->
 <script src="js/slick.js"></script>
+<script src="js/jquery.inputmask.bundle.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
 <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 <script type="text/javascript"   src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
@@ -327,10 +392,12 @@
 			messages: {
 		    	contacts__name: "Пожалуйста введите имя",
 		    	contacts__email: {
-		    		required: "Пожалуйста введите e-mail"
+		    		required: "Пожалуйста введите e-mail",
+		    		email: "Пожалуйста введите адрес электронной почты"
 		    	},
 		    	contacts__tel: {
-		        	required : "Пожалуйста введите телефон	"
+		        	required : "Пожалуйста введите телефон",
+		        	number: "Пожалуйста введите телефон"
 		        }
 		    },
 		})

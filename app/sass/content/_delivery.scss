@@ -84,7 +84,7 @@
 		}
 	}
 	&__col {
-		width: 290px;
+		width: 220px;
 		@include breakpoint(max-width 992px) {
 			width: 100%;
 		}
@@ -109,6 +109,7 @@
 		width: 157px;
 		height: 177px;
 		object-fit: contain;
+		transform: rotate(10deg);
 		@include breakpoint(max-width 992px) {
 			display: none;
 		}

@@ -97,12 +97,12 @@
 				</table>
 				<section class="multi-step-form">
 
-					<h2>Для завершения заказа заполните форму - все поля обязательные</h2>
+					<h2 class="multi-step-form__title">Для завершения заказа заполните форму - все поля обязательные.</h2>
+					<h2 class="multi-step-form__title">После отправки формы с вами свяжется оператор для уточнения деталей заказа и расчёта стоимости доставки.</h2>
 
 					<div class="steps">
 						<button class="step-active" type="button" disabled>Шаг 1 - Контактные данные</button>
 						<button class="right35" type="button" disabled>Шаг 2 - Доставка</button>
-						<button class="right70" type="button" disabled>Шаг 3 - Оплата</button>
 					</div>
 
 					<form id="cart_form" action="#" method="post">
@@ -112,7 +112,7 @@
 							<div id="messageBox">
 							</div>
 							<input id="name" type="text" name="name" placeholder="Ваше имя*" required>
-							<input id="tel" type="tel" name="tel" placeholder="Ваш телефон*" required>
+							<input id="tel" type="text" name="tel" placeholder="Ваш телефон*" required>
 							<input id="email" type="email" name="email" placeholder="Ваш e-mail*" required>
 							<button class="btn-next" type="button" aria-controls="step-2">Перейти к доставке</button>
 						</div>
@@ -122,12 +122,12 @@
 							<div id="messageBox2"></div>
 							<div class="radio__container">
 								<input id="storage" type="radio" name="radio" value="storage">
-								<label for="storage"><strong class="uppercase">Cамовывоз со склада</strong> (г. Москва, ул. Неверовского, д.10 стр.4, офис 10, метро «Парк Победы»).</label>
+								<label for="storage"><strong class="uppercase">Cамовывоз со склада</strong> (г. Москва, ул. Неверовского, д.10 стр.4, офис 10 <img src="img/marker.png" alt="">, метро «Парк Победы» ежедневно с 11:00 до 19:00).</label>
 							</div>
 												
 							<div class="radio__container">
 								<input id="courier" type="radio" name="radio" value="courier">
-								<label for="courier"><strong class="uppercase">Доставка курьером</strong> по Москве 350р. <span class="fastest-delivery">Самая быстрая доставка <img src="img/truck.png" alt=""></span></label>
+								<label for="courier"><strong class="uppercase">Доставка курьером</strong> по Москве от 350р. <span class="fastest-delivery">Самая быстрая доставка <img src="img/truck.png" alt=""></span></label>
 							</div>
 												
 							<div class="radio__container">
@@ -135,24 +135,19 @@
 								<label for="region">Доставка в другой регион.*</label>
 							</div>
 							<div class="radio__container">
-								<input id="agreement" type="radio" name="radio" value="agreement">
-								<label for="agreement">Даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a></label>
+								<input id="agreement" class="cart__input-ckeckbox" type="checkbox" name="checkbox" value="agreement">
+								<label for="agreement" class="cart__label-ckeckbox">Даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a></label>
 							</div>
 												
 							<div class="radio__container">
-								<input id="offers" type="radio" name="radio" value="offers">
-								<label for="offers">Хочу получать специальные предложения.</label>
+								<input id="offers" class="cart__input-ckeckbox" type="checkbox" name="checkbox" value="offers">
+								<label for="offers" class="cart__label-ckeckbox">Хочу получать специальные предложения.</label>
 							</div>
 							<p>* Доставка в другие регионы осуществляется курьерским службами Dimex, Dostavista, EMS и транспортными компаниями "Деловые линии" и "КИТ".</p>
-							<button class="btn-next" type="button" id="send_contact" aria-controls="step-3">Перейти к оплате</button>
+							<button type="submit" id="submit_form" data-type="submit">Оплатить</button>
 
 						</div>
-						
-						<div aria-label="Step Three" tabindex="-1" class="fieldset" id="step-3">
-							<p>При получении наличными курьеру</p>
-							<p class="card_pay">Возможность оплаты картой уточняйте при заказе</p>
-							<button type="submit" id="submit_form" data-type="submit">Оплатить</button>
-						</div>
+
 						
 					</form>
 				</section>

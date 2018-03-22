@@ -126,7 +126,7 @@
 		
 		input,
 		span {
-			height: 28px;
+			height: 29px;
 			border-width: 2px;
 		}
 
@@ -305,12 +305,16 @@
 		}
 
 		input[type="radio"]:checked,
-		input[type="radio"]:not(:checked) {
+		input[type="radio"]:not(:checked),
+		input[type="checkbox"]:checked,
+		input[type="checkbox"]:not(:checked) {
 		    position: absolute;
 		    left: -9999px;
 		}
 		input[type="radio"]:checked + label,
-		input[type="radio"]:not(:checked) + label
+		input[type="radio"]:not(:checked) + label,
+		input[type="checkbox"]:checked + label,
+		input[type="checkbox"]:not(:checked) + label
 		{
 		    position: relative;
 		    padding-left: 28px;
@@ -319,7 +323,9 @@
 		    display: inline-block;
 		}
 		input[type="radio"]:checked + label:before,
-		input[type="radio"]:not(:checked) + label:before {
+		input[type="radio"]:not(:checked) + label:before,
+		input[type="checkbox"]:checked + label:before,
+		input[type="checkbox"]:not(:checked) + label:before {
 		    content: '';
 		    position: absolute;
 		    top: 0;
@@ -331,8 +337,14 @@
 		    border-radius: 100%;
 		    background: #fff;
 		}
+		input[type="checkbox"]:checked + label:before,
+		input[type="checkbox"]:not(:checked) + label:before {
+			border-radius: 5px;
+		}
 		input[type="radio"]:checked + label:after,
-		input[type="radio"]:not(:checked) + label:after {
+		input[type="radio"]:not(:checked) + label:after,
+		input[type="checkbox"]:checked + label:after,
+		input[type="checkbox"]:not(:checked) + label:after {
 		    content: '';
 		    width: 12px;
 		    height: 12px;
@@ -344,12 +356,19 @@
 		    -webkit-transition: all 0.2s ease;
 		    transition: all 0.2s ease;
 		}
-		input[type="radio"]:not(:checked) + label:after {
+
+		input[type="checkbox"]:checked + label:after,
+		input[type="checkbox"]:not(:checked) + label:after {
+			border-radius: 3px;
+		}
+		input[type="radio"]:not(:checked) + label:after,
+		input[type="checkbox"]:not(:checked) + label:after {
 		    opacity: 0;
 		    -webkit-transform: scale(0);
 		    transform: scale(0);
 		}
-		input[type="radio"]:checked + label:after {
+		input[type="radio"]:checked + label:after,
+		input[type="checkbox"]:checked + label:after {
 		    opacity: 1;
 		    -webkit-transform: scale(1);
 		    transform: scale(1);
@@ -373,6 +392,16 @@
 			align-self: center;	
 		}
 	}
+}
+
+.cart__input-checkbox {
+	position: absolute;
+	left: -9999px;
+	z-index: -9999;
+}
+
+.cart__label-checkbox {
+
 }
 
 
@@ -399,8 +428,10 @@
 		height: 707px;
 	}
 
-	h2 {
+	&__title {
 		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
 		font-family: 'Lato-Regular', sans-serif;
 		font-size: 18px;
 		color: #1c4a93;

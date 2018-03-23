@@ -1,7 +1,10 @@
 .food {
 	position: relative;
 	box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
-
+	&__price {
+		font-size: 24px;
+		color: #1653a0;
+	}
 	.food__wrap {
 		position: absolute;
 		z-index: 5;
@@ -25,7 +28,7 @@
 					font-weight: normal;
 					font-size: 120px;
 					color: #1653a0;
-					line-height: 80px;
+					line-height: 1;
 					@include breakpoint(max-width 630px) {
 						font-size: 70px;
 					}
@@ -42,6 +45,10 @@
 						text-align: center;
 					}
 				}
+			}
+
+			.food__title-main_line-height {
+				line-height: 80px;
 			}
 
 			.food__describe {

@@ -126,8 +126,9 @@
 		
 		input,
 		span {
-			height: 29px;
+			height: 30px;
 			border-width: 2px;
+			box-sizing: border-box;
 		}
 
 		span {

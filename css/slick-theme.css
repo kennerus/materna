@@ -152,6 +152,10 @@
     border: 1px solid #eef7ff;
 }
 
+.food.slick-slide {
+    border: none;
+}
+
 .slick-slide img {
     margin: 0 auto;
 }

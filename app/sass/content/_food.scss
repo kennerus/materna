@@ -1,9 +1,13 @@
 .food {
-	min-height: 890px;
-	background: url(../img/materna-bg.png) center center no-repeat;
-	background-size: cover;
+	position: relative;
 	box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
+
 	.food__wrap {
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		right: 0;
+		left: 0;
 		padding-top: 100px;
 
 		@include breakpoint(max-width 992px) {
@@ -15,7 +19,7 @@
 
 		.food__text {
 			.food__title {
-				h1 {
+				&-main {
 					margin: 0;
 					font-family: 'Corinthia', sans-serif;
 					font-weight: normal;
@@ -88,8 +92,18 @@
 			right: 20vw;
 			
 			@include breakpoint(max-width 992px) {
-				top: 50px;
+				top: -50px;
 				right: 0;
+				width: 50%;
+			}
+
+			@include breakpoint(max-width 768px) {
+				width: 80%;
+			}
+
+			@include breakpoint(max-width 500px) {
+				top: 50px;
+				width: 100%;
 			}
 
 			img {

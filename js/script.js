@@ -13,6 +13,11 @@ if (imgs.length > 0) {
     })
 }
 
+$('.food-slider').slick({
+    slidesToShow: 1,
+    arrows: false
+})
+
 $('.help__popular').slick({
     slidesToShow: 3,
     responsive: [

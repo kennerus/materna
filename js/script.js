@@ -41,7 +41,7 @@ $('.help__popular').slick({
 /*--  Слайдер на странице отзывов  --*/
 $('.delivery__slider').slick({
     centerMode: true,
-    centerPadding: '110px',
+    centerPadding: '80px',
     slidesToShow: 3,
     responsive: [
         {

@@ -49,6 +49,10 @@
 
 			.food__title-main_line-height {
 				line-height: 80px;
+
+				@include breakpoint(max-width 450px) {
+					line-height: 40px
+				}
 			}
 
 			.food__describe {

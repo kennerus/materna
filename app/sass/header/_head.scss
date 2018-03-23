@@ -58,11 +58,15 @@
 				order: -1;
 				width: 100%;
 			}
-			h3 {
+			&-title {
 				margin: 0;
 				font-weight: 800;
 				font-size: 18px;
 				color: #26346e;
+
+				@include breakpoint(max-width 576px) {
+					display: none;
+				}
 			}
 
 			img {
@@ -349,5 +353,14 @@
 
 	@include breakpoint(max-width 768px) {
 		display: inline-block;
+	}
+}
+
+.header__graph-mob {
+	font-size: 14px;
+	color: #224c92;
+
+	p {
+		margin-top: 0;
 	}
 }

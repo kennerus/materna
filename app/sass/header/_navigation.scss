@@ -29,16 +29,19 @@
 		}
 
 		.header__nav-menu {
+			padding: 0;
+			margin: 0;
 			height: 100%;
 			display: flex;
 	        justify-content: space-between;
+			list-style-type: none;
 
 			@include breakpoint(max-width 1200px) {
 				height: auto;
 				flex-wrap: wrap;
 			}
 
-			a {
+			>li>a {
 				height: 100%;
 				padding: 0 25px;
 				display: flex;

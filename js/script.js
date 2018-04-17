@@ -96,5 +96,21 @@ $('#callback').validate({
     // Specify validation error messages
     messages: {
       callback: "Пожалуйста, введите ваш телефон",
-    },
+    }
+});
+
+//dropdown-menu
+$(function () {
+    $(document).on('click', '.header__nav-menu>li>a', function () {
+        var menu = $(this).siblings('.menu');
+        if (menu.length > 0) {
+            event.preventDefault();
+            if (menu.hasClass('menu--is-visible')) {
+                menu.removeClass('menu--is-visible')
+            } else {
+                menu.addClass('menu--is-visible')
+            }
+        }
+    })
+
 });

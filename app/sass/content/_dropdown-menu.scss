@@ -1,0 +1,43 @@
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  padding: 20px;
+  display: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #053e73;
+  &--is-visible {
+    display: flex;
+  }
+  &__list {
+    width: 25%;
+
+  }
+  &__items {
+    margin: 0;
+    padding: 0 20px;
+    list-style-type: none;
+  }
+  &__title {
+    display: block;
+    color: #ff6500;
+    text-transform: uppercase;
+    padding: 0.5em 0px;
+    border-bottom: #548abc 2px dotted;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__item {
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 10px;
+    &:hover {
+      color: #ff6500;
+    }
+  }
+}

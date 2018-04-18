@@ -37,8 +37,9 @@
 			list-style-type: none;
 
 			@include breakpoint(max-width 1200px) {
+				top: 100%;
 				height: auto;
-				flex-wrap: wrap;
+				flex-direction: column;
 			}
 
 			>li>a {
@@ -168,10 +169,10 @@
 		background-color: rgba(34,76,146,0.9);
 		transition: all 0.5s;
 		visibility: visible;
-		overflow-y: hidden;
+		//overflow-y: hidden;
 		z-index: 2;
-		@include breakpoint(min-width 576px) {
-			width: 300px;
-		}
+		//@include breakpoint(min-width 576px) {
+		//	width: 100;
+		//}
 	}
 }

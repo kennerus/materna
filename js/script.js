@@ -112,5 +112,39 @@ $(function () {
             }
         }
     })
+});
 
+$('.catalogue__slider').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+        {
+            breakpoint: 1050,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 800,
+            settings: {
+                arrows: false,
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                arrows: false,
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                slidesToShow: 1
+            }
+        }
+    ]
 });

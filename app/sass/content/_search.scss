@@ -1,0 +1,101 @@
+.main__search {
+	background-position-y: 88%;
+	background-repeat: no-repeat;
+    background-size: cover;
+    .search {
+    	background: url(../img/pacifier.png) right 65% no-repeat,
+					url(../img/bottle.png) left 55% no-repeat;
+	        background-size: 11%, 11%;
+	        box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
+	    .search__wrap {
+	    	max-width: 1330px;
+			width: 100%;
+			padding-bottom: 50px;
+			flex-direction: column;
+	        justify-content: flex-start;
+		    background-image: url(../img/product-bg.png);
+		    background-size: 100% 100%;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    .search__breadcrumps {
+		    	margin: 20px 0 30px 110px;
+    	        align-self: flex-start;
+
+    	        @include breakpoint(max-width 992px) {
+	   	        	margin: 10px 0 15px 70px;
+	   	        }
+
+	   	        @include breakpoint(max-width 768px) {
+	   	        	flex-wrap: wrap;
+	   	        	margin: 0;
+	   	        	margin-left: 10px;
+	   	        }
+
+	   	        @include breakpoint(max-width 576px) {
+	   	        	margin: 0;
+
+	   	        }
+
+		    	ul {
+		    		display: flex;
+		    		list-style: none;
+		    		color: #203350;
+					
+					@include breakpoint(max-width 576px) {
+						flex-wrap: wrap;
+					}
+
+		    		li a {
+		    			font-family: 'Lato-Medium', sans-serif;
+		    			color: #203350;
+		    			&.active {
+		    				font-family: 'Lato-Bold', sans-serif;
+		    				color: #224c92;
+		    			}
+		    		}
+		    	}
+		    }
+		    .search__content-container {
+		    	max-width: 990px;
+    			width: 85%;
+		    	.header__form {
+					position: relative;
+					width: 340px;
+
+					.search__header {
+						padding: 5px 15px 3px;
+						border-radius: 17px;
+						border: 1px solid #b7defd;
+						background-color: #edf6fe;
+						width: 100%;
+						&::placeholder {
+							color: #5c636d;
+							font-size: 13px;
+							font-weight: 300;
+							opacity: 1;
+						}
+					}
+
+					.submit__header_label {
+						position: absolute;
+						top: 5px;
+						right: 10px;
+					}
+
+					.submit__header {
+						position: absolute;
+						width: 1px;
+						height: 1px;
+						z-index: -999;
+					}
+				}
+
+				.search__results-title {
+					margin-top: 60px;
+					font-size: 17px;
+					color: #5c636d;
+				}
+		    }
+	    }
+    }
+}

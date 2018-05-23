@@ -101,7 +101,7 @@ $('#callback').validate({
 
 //dropdown-menu
 $(function () {
-    $(document).on('click', '.header__nav-menu>li>a', function () {
+    $(document).on('click', '.header__nav-menu>li>a', function (event) {
         var menu = $(this).siblings('.menu');
         if (menu.length > 0) {
             event.preventDefault();
@@ -128,21 +128,12 @@ $('.catalogue__slider').slick({
         {
             breakpoint: 800,
             settings: {
-                arrows: false,
                 slidesToShow: 2
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 620,
             settings: {
-                arrows: false,
-                slidesToShow: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                arrows: false,
                 slidesToShow: 1
             }
         }

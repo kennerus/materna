@@ -178,11 +178,13 @@
 		    						width: 35%;
 		    					}
 		    				}
+
 		    			}
 
 		    			.buy {
 		    				display: flex;
 		    				justify-content: space-between;
+		    				margin-bottom: 20px;
 		    				button {
 		    					cursor: pointer;
 		    				}
@@ -310,7 +312,7 @@
 				font-weight: normal;
 				font-style: normal;
 				font-size: 18px;
-
+				margin: 20px 0 40px;
 				span {
 					margin-top: 10px;
 					font-family: 'Lato-Black', sans-serif;

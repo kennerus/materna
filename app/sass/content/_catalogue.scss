@@ -17,6 +17,12 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
+      .bx_sitemap .bx_sitemap_title {
+        text-transform: none;
+        a {
+          max-width: 100%;
+        }
+      }
 
       .best__products {
         max-width: 900px;
@@ -170,9 +176,11 @@
 
       .catalogue__title {
         color: #224c92;
-        font-size: 12px;
         text-align: center;
         text-transform: uppercase;
+        h2 {
+          font-size: 18px;
+        }
       }
 
       .catalogue__content {

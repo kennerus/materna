@@ -548,8 +548,11 @@
 	max-width: 190px;
 
 	.another-img {
-		max-width: 130px;
-		max-height: 130px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 130px;
+		height: 130px;
 		border: 1px solid #eef7ff;
 
 		img {

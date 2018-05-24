@@ -150,6 +150,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid #eef7ff;
+    box-sizing: border-box;
 }
 
 .food.slick-slide {
@@ -160,7 +161,7 @@
     margin: 0 auto;
 }
 
-.slick-track {
-    /*display: flex !important;*/
-    align-items: center;
+.slick-track,
+.slick-list{
+    height: 100%;
 }

@@ -70,7 +70,7 @@
 }
 
 .search__input {
-	padding: 5px 15px 3px;
+	padding: 8px 15px 8px;
 	border-radius: 17px;
 	border: 1px solid #b7defd;
 	background-color: #edf6fe;
@@ -85,8 +85,8 @@
 
 .submit__search_label {
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 8px;
+	right: 13px;
 }
 
 .submit__search {
@@ -129,6 +129,9 @@
 	color: #224c92;
 	padding-top: 10px;
 	margin-left: 10px;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .search__pagination {
@@ -148,9 +151,16 @@
 			color: #5c636d;
 			display: block;
 		}
+		&:hover {
+			background-color: #deefff;
+		}
 	}
 	.active {
 		background-color: #fe6501;
+		border: none;
+		&:hover {
+			background-color: #fe6501;
+		}
 		a {
 			color: #ffffff;
 		}

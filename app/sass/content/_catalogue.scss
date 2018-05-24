@@ -82,7 +82,7 @@
 	h3 {
 		font-family: Corinthia;
 		color: #224c92;
-		font-size: 34px;
+		font-size: 36px;
 		font-weight: normal;
 		margin: 20px 0 10px;
 	}
@@ -149,6 +149,10 @@
 		.catalogue__slider-title {
 			text-align: center;
 			margin-top: 20px;
+			a {
+				color: #1c4a96;
+				font-family: 'Lato-Bold', sans-serif;
+			}
 		}
 	}
 }

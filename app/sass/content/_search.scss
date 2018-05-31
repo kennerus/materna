@@ -61,7 +61,20 @@
 
 .search__content-container {
 	max-width: 990px;
-	width: 85%;
+	width: 75%;
+	align-self: flex-start;
+	margin-left: 150px;
+	@include breakpoint(max-width 992px) {
+    	margin-left: 110px;
+    }
+    @include breakpoint(max-width 768px) {
+    	margin-left: 50px;
+    	width: 85%;
+    }
+    @include breakpoint(max-width 576px) {
+    	margin-left: 40px;
+    	width: 80%;
+    }
 }
 
 .search__form {

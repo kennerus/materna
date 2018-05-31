@@ -239,6 +239,8 @@ textarea{
     .feedback-main__user {
         width: 46%;
         padding: 15px;
+        box-sizing: border-box;
+        margin: 10px 2%;
 
         @include breakpoint(max-width 992px) {
             width: 100%;

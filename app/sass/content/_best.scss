@@ -82,6 +82,11 @@
 					transition: box-shadow 0.5s;
 				}
 
+				@include breakpoint(max-width 576px) {
+					width: 100%;
+					box-sizing: border-box;
+				}
+
 				.share {
 					position: absolute;
 					width: 120px;

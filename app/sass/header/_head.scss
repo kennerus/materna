@@ -182,7 +182,7 @@
 
 			.header__form {
 				position: relative;
-				width: 265px;
+				width: 275px;
 
 				.search__header {
 					padding: 5px 15px 3px;
@@ -190,6 +190,7 @@
 					border: 1px solid #b7defd;
 					background-color: #edf6fe;
 					width: 100%;
+					box-sizing: border-box;
 					&::placeholder {
 						color: #5c636d;
 						font-size: 13px;
@@ -206,9 +207,10 @@
 
 				.submit__header {
 					position: absolute;
+					left: -9999px;
+					z-index: -999;
 					width: 1px;
 					height: 1px;
-					z-index: -999;
 				}
 			}
 

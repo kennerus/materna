@@ -88,6 +88,7 @@
 	border: 1px solid #b7defd;
 	background-color: #edf6fe;
 	width: 100%;
+	box-sizing: border-box;
 	&::placeholder {
 		color: #5c636d;
 		font-size: 13px;
@@ -100,6 +101,11 @@
 	position: absolute;
 	top: 8px;
 	right: 13px;
+	cursor: pointer;
+
+	img {
+		vertical-align: bottom;
+	}
 }
 
 .submit__search {

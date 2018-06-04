@@ -39,8 +39,10 @@
 
 		    	ul {
 		    		display: flex;
+						margin-bottom: 0;
 		    		list-style: none;
 		    		color: #203350;
+						line-height: 1;
 					
 					@include breakpoint(max-width 576px) {
 						flex-wrap: wrap;

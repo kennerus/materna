@@ -1,19 +1,19 @@
 .prod {
 	background-position-y: 88%;
 	background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 	.product {
 		background: url(../img/pacifier.png) right 65% no-repeat,
 				url(../img/bottle.png) left 55% no-repeat;
 	    background-size: 11%, 11%;
 	    box-shadow: inset 0px 15px 30px -18px rgba(50, 50, 50, 0.4);
 
-		.product__wrap {
-			max-width: 1330px;
-			width: 100%;
-			min-height: 1280px;
-			flex-direction: column;
-	        justify-content: flex-start;
+			.product__wrap {
+				max-width: 1330px;
+				width: 100%;
+				flex-direction: column;
+	      justify-content: flex-start;
+	      padding-bottom: 50px;
 		    background-image: url(../img/product-bg.png);
 		    background-size: 100% 100%;
 		    background-repeat: no-repeat;
@@ -465,6 +465,7 @@
 						display: block;
 						width: 190px;
 						margin: 40px auto;
+						margin-bottom: 0;
 						padding: 15px 0;
 						position: relative;
 						border: none;
@@ -549,7 +550,7 @@
 }
 
 .another-item {
-	max-width: 190px;
+	max-width: 165px;
 
 	.another-img {
 		display: flex;
@@ -568,7 +569,7 @@
 }
 
 .similar__product {
-	width: 300px;
+	width: 220px;
 	padding: 30px 40px;
 	display: flex;
 	flex-direction: column;

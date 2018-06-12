@@ -57,6 +57,9 @@
 }
 .delivery__slider {
 	height: 560px;
+	@include breakpoint(max-width 992px) {
+		height: auto;
+	}
 	.slick-next:before,
 	.slick-prev:before {
 		content: '';

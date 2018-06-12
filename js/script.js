@@ -54,7 +54,7 @@ $('.delivery__slider').slick({
   slidesToShow: 3,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1200,
       settings: {
         arrows: false,
         centerMode: true,
@@ -63,20 +63,29 @@ $('.delivery__slider').slick({
       }
     },
     {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        // centerPadding: '20px',
+        slidesToShow: 2
+      }
+    },
+    {
       breakpoint: 600,
       settings: {
         arrows: false,
-        centerMode: true,
-        centerPadding: '120px',
-        slidesToShow: 1
+        centerMode: false,
+        // centerPadding: '120px',
+        slidesToShow: 2
       }
     },
     {
       breakpoint: 480,
       settings: {
         arrows: false,
-        centerMode: true,
-        centerPadding: '60px',
+        centerMode: false,
+        // centerPadding: '60px',
         slidesToShow: 1
       }
     }

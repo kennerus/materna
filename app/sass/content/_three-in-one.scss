@@ -10,7 +10,7 @@
 		background: none;
 	}
 
-	@include breakpoint(max-width 450px) {
+	@include breakpoint(max-width 768px) {
 		top: 0;
 	}
 

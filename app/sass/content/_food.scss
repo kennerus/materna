@@ -4,6 +4,14 @@
 	&-slider {
 		height: 890px;
 
+		@include breakpoint(max-width 768px) {
+			height: 630px;
+		}
+
+		@include breakpoint(max-width 576px) {
+			height: 100vh;
+		}
+
 		.slick-list,
 		.slick-track  {
 			height: 100%;

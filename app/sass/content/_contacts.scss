@@ -75,6 +75,7 @@
 		border-radius: 18px;
 		background-color: #fafafa;
 		color: #282828;
+		box-sizing: border-box;
 	}
 
 	input:nth-child(2n) {
@@ -89,6 +90,7 @@
 		border: 1px solid #e6e6e6;
 		border-radius: 5px;
 		background-color: #fafafa;
+		box-sizing: border-box;
 	}
 }
 
